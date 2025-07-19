@@ -24,3 +24,23 @@ else:
     print("NO")
 
 # ============================================#
+
+a = int(input())
+b = int(input())
+operation = input()
+
+if operation == "+":
+    result = a + b
+elif operation == "-":
+    result = a - b
+elif operation == "*":
+    result = a * b
+elif operation == "/":
+    if b == 0:
+        result = "На ноль делить нельзя!"
+    else:
+        result = a / b
+else:
+    result = "Неверная операция"
+
+print(result)
