@@ -44,3 +44,22 @@ else:
     result = "Неверная операция"
 
 print(result)
+
+# ============================================#
+
+color1 = input().lower()  # Приводим ввод к нижнему регистру для удобства
+color2 = input().lower()
+
+primary_colors = {"красный", "синий", "желтый"}  # Множество основных цветов
+
+if color1 not in primary_colors or color2 not in primary_colors:
+    print("ошибка цвета")
+else:
+    if color1 == color2:
+        print(color1)  # Если цвета одинаковые, результат тот же цвет
+    elif {color1, color2} == {"красный", "синий"}:
+        print("фиолетовый")
+    elif {color1, color2} == {"красный", "желтый"}:
+        print("оранжевый")
+    elif {color1, color2} == {"синий", "желтый"}:
+        print("зеленый")
