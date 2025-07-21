@@ -1,11 +1,6 @@
-n = int(input())
+x1, y1, x2, y2 = int(input()), int(input()), int(input()), int(input())
 
-if n % 2 != 0:  # Если число нечетное
+if abs(x1 - x2) == abs(y1 - y2):
     print("YES")
-else:  # Все четные числа
-    if 2 <= n <= 5:
-        print("NO")
-    elif 6 <= n <= 20:
-        print("YES")
-    else:  # Все четные числа > 20
-        print("NO")
+else:
+    print("NO")
