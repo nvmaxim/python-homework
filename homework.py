@@ -1,111 +1,11 @@
-# git remote set-url origin https://github.com/nvmaxim/python-homework.git
-# git push -u origin main
-# git pull origin main --allow-unrelated-histories
-# git push -u origin main
-
-
-a = int(input())
-
-if a >= 2 and a <= 17:
-    b = 3
-    p = a * a + b * b
-else:
-    b = 5
-
-p = (a + b) * (a + b)
-print(p)
-
-# ========================================#
-x = int(input())
-
-if 1000 <= x <= 9999 and (x % 7 == 0 or x % 17 == 0):
-    print("YES")
-else:
-    print("NO")
-
-# ============================================#
-
-a = int(input())
-b = int(input())
-operation = input()
-
-if operation == "+":
-    result = a + b
-elif operation == "-":
-    result = a - b
-elif operation == "*":
-    result = a * b
-elif operation == "/":
-    if b == 0:
-        result = "На ноль делить нельзя!"
-    else:
-        result = a / b
-else:
-    result = "Неверная операция"
-
-print(result)
-
-# ============================================#
-
-color1 = input().lower()  # Приводим ввод к нижнему регистру для удобства
-color2 = input().lower()
-
-primary_colors = {"красный", "синий", "желтый"}  # Множество основных цветов
-
-if color1 not in primary_colors or color2 not in primary_colors:
-    print("ошибка цвета")
-else:
-    if color1 == color2:
-        print(color1)  # Если цвета одинаковые, результат тот же цвет
-    elif {color1, color2} == {"красный", "синий"}:
-        print("фиолетовый")
-    elif {color1, color2} == {"красный", "желтый"}:
-        print("оранжевый")
-    elif {color1, color2} == {"синий", "желтый"}:
-        print("зеленый")
-
-
 n = int(input())
 
-if n % 100 == 0:
+if n % 2 != 0:  # Если число нечетное
     print("YES")
-else:
-    print("NO")
-
-
-x1, y1, x2, y2 = int(input()), int(input()), int(input()), int(input())
-sum = x1 + y1 + x2 + y2
-if sum % 2 == 0:
-    print("YES")
-else:
-    print("NO")
-
-
-age = int(input())
-gen = input()
-
-if 10 <= age <= 15 and gen == "f":
-    print("YES")
-else:
-    print("NO")
-
-
-number = int(input())
-
-roman_numerals = {
-    1: 'I',
-    2: 'II',
-    3: 'III',
-    4: 'IV',
-    5: 'V',
-    6: 'VI',
-    7: 'VII',
-    8: 'VIII',
-    9: 'IX',
-    10: 'X'
-}
-
-if 1 <= number <= 10:
-    print(roman_numerals[number])
-else:
-    print("ошибка")
+else:  # Все четные числа
+    if 2 <= n <= 5:
+        print("NO")
+    elif 6 <= n <= 20:
+        print("YES")
+    else:  # Все четные числа > 20
+        print("NO")
