@@ -1,10 +1,11 @@
 x1, y1 = int(input()), int(input())
 x2, y2 = int(input()), int(input())
 
-dx = abs(x1 - x2)
-dy = abs(y1 - y2)
-
-if (dx == 1 and dy == 2) or (dx == 2 and dy == 1):
+# Проверка хода по горизонтали или вертикали
+if x1 == x2 or y1 == y2:
+    print("YES")
+# Проверка хода по диагонали
+elif abs(x1 - x2) == abs(y1 - y2):
     print("YES")
 else:
     print("NO")
