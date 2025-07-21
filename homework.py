@@ -71,3 +71,11 @@ if n % 100 == 0:
     print("YES")
 else:
     print("NO")
+
+
+x1, y1, x2, y2 = int(input()), int(input()), int(input()), int(input())
+sum = x1 + y1 + x2 + y2
+if sum % 2 == 0:
+    print("YES")
+else:
+    print("NO")
