@@ -63,3 +63,11 @@ else:
         print("оранжевый")
     elif {color1, color2} == {"синий", "желтый"}:
         print("зеленый")
+
+
+n = int(input())
+
+if n % 100 == 0:
+    print("YES")
+else:
+    print("NO")
